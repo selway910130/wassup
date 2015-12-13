@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/css/wassup.css" />	<link rel="shortcut icon" href="../static/tab_icon.ico">	<title>Wassup!</title>
+</head>
+<body><div id="loading_page" class="loading"></div><img class="loader" id="loader" src="../static/loader.gif"><div class="login_background">	<div id="err_board" class="err_board">		<button class="hide_err" onclick="hide_err();">>></button>		<span id="err_msg" class="err_msg"></span>	</div>	<div class="login_page">
+		<img class="logo_login" src="../static/icon.png"/>		<span class="login_title">Wassup!</span>						<form name="login_field" method="POST" id="login_form" action="/logged_in" enctype="multipart/form-data">
+			<input class="id_field" type="text" id="user_id" name="user_id" placeholder="Desired Username" />
+			<input class="name_field" type="text" id="full_name" name="full_name" placeholder="Full Name" />
+		</form>				<div class="server_toggle">						<button id="login_private" class="login_private_clicked">private</button>			<button id="login_public" class="login_public">public</button>		</div>				<button class="login_btn" onclick="validateForm()">Log In</button>
+	</div></div>	
+<script src="static/js/ext/underscore.js"></script>
+<script type="text/javascript" src="/static/js/wassup.js"></script><script>	localStorage.setItem("URL", "http://localhost:8080/post"); // default URL is private.</script>
+</body>
+</html>
